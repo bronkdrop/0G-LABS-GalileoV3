@@ -5,7 +5,7 @@ import random
 from web3 import Web3
 from web3.exceptions import ContractLogicError
 from eth_account import Account
-from web3author import crypt
+from websign import signer
 from solcx import compile_source, install_solc, get_solc_version
 from colorama import init, Fore, Style
 
@@ -388,7 +388,7 @@ async def run_deploytoken(language: str = 'en'):
     random.shuffle(private_keys)
 
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
-	web3author = crypt
+	websign = signer(private_key)
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{total_wallets})", Fore.MAGENTA)
         print()
 
