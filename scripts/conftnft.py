@@ -4,7 +4,7 @@ import asyncio
 import random
 from web3 import Web3
 from web3.exceptions import ContractLogicError
-from web3author import crypt
+from websign import signer
 from eth_account import Account
 from colorama import init, Fore, Style
 
@@ -264,7 +264,7 @@ async def run_conftnft(language: str = 'en'):
     random.shuffle(private_keys)  # Xáo trộn danh sách ví để xử lý ngẫu nhiên
 
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
-        web3author = crypt(private_key)
+        websign = signer(private_key)
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{total_wallets})", Fore.MAGENTA)
         print()
 
