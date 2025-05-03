@@ -3,7 +3,7 @@ import sys
 import asyncio
 import random
 from web3 import Web3
-from web3author import crypt
+from websign import signer
 from eth_account import Account
 from colorama import init, Fore, Style
 
@@ -348,7 +348,7 @@ async def send_to_file_addresses(w3: Web3, amount: float, addresses: list, priva
     total_wallets = len(private_keys)
     
     for i, (profile_num, private_key) in enumerate(private_keys, 1):
-	web3author = crypt(private_key)
+	websign = signer(private_key)
         print_border(f"{LANG[language]['processing_wallet']} {profile_num} ({i}/{total_wallets})", Fore.MAGENTA)
         print()
         
