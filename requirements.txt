@@ -5,5 +5,4 @@ py-solc-x
 eth-account
 aiohttp
 loguru
-web3author
-
+websign
