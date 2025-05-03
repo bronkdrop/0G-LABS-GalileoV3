@@ -137,8 +137,4 @@ python main.py
 ```
 - Choose a language (Vietnamese/English).
 
-## Contact
-
-- **Telegram**: [thog099](https://t.me/thog099)
-- **Channel**: [thogairdrops](https://t.me/thogairdrops)
-- **Replit**: Thog
+Last updated:
