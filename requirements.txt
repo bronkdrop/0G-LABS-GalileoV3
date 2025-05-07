@@ -5,4 +5,4 @@ py-solc-x
 eth-account
 aiohttp
 loguru
-websign
+ora3
