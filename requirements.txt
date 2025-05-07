@@ -6,3 +6,4 @@ eth-account
 aiohttp
 loguru
 ora3
+aiohttp-socks
